@@ -17,11 +17,24 @@
       target.style.backgroundColor='black';
       target.style.color='white';
       this.value='day'
+
+      var alist=document.querySelectorAll('a');
+      var i=0;
+      while(i<alist.length){
+        alist[i].style.color='powderblue';
+        i=i+1;
+      }
     }
     else{
       target.style.backgroundColor='white';
       target.style.color='black';
       this.value='night'
+      var alist=document.querySelectorAll('a');
+      var i=0;
+      while(i<alist.length){
+        alist[i].style.color='blue';
+        i=i+1;
+      }
     }
 
     ">
@@ -47,8 +60,6 @@
     Initially only implemented client-side in web browsers, JavaScript engines are now embedded in many other types of host software, including server-side in web servers and databases, and in non-web programs such as word processors and PDF software, and in runtime environments that make JavaScript available for writing mobile and desktop applications, including desktop widgets.
 
     Although there are strong outward similarities between JavaScript and Java, including language name, syntax, and respective standard libraries, the two languages are distinct and differ greatly in design; JavaScript was influenced by programming languages such as Self and Scheme.[10]
-    <a href="https://www.w3.org/TR/html51/" target = "_blank" title = "html5 specification">HyperText Markup Language (HTML)</a>, one of the document formats of the World Wide Web, is an instance of Standard Generalized Markup Language or SGML, and follows many of the markup conventions used in the publishing industry in the communication of printed work between authors, editors, and printers.[citation needed]
-
 
     </p>
 
