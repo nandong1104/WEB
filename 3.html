@@ -9,14 +9,22 @@
 </head>
 <body><! 본문-->
     <h1><a href="index.html"> WEB </a></h1>
+
     <input type="button" value="night" onclick="
-    document.querySelector('body').style.backgroundColor='black';
-    document.querySelector('body').style.color='white';
+    var target=document.querySelector('body')
+    if (this.value
+  ==='night'){
+      target.style.backgroundColor='black';
+      target.style.color='white';
+      this.value='day'
+    }
+    else{
+      target.style.backgroundColor='white';
+      target.style.color='black';
+      this.value='night'
+    }
+
     ">
-    <input type="button" value="day"onclick="
-    document.querySelector('body').style.backgroundColor='white';
-    document.querySelector('body').style.color='black';
-    " >
 
 <div id="grid">
     <ol><!리스트의 순서를 나타냄 ordered list-->
@@ -43,10 +51,11 @@
 
 
     </p>
+
+
   </div>
 </div>
-<img src="coding.jpg" width="100"> <!img 속성 속성-->
-<!src= 파일이름 width=사진크기-->
+
 
 
 </body>
