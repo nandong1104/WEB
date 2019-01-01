@@ -10,44 +10,47 @@
 <body><! 본문-->
     <h1><a href="index.html"> WEB </a></h1>
     <script>
+    var Links={
+      setColor:function(color){
+        var alist=document.querySelectorAll('a');
+        var i=0;
+        while(i<alist.length){
+          alist[i].style.color=color;
+          i=i+1;
+        }
+      }
+
+    }
+    var Body={
+      setColor:function(color){
+        document.querySelector('body').style.color=color;
+      },
+      setBackgroundColor:function(color){
+        document.querySelector('body').style.backgroundColor=color;
+      }
+    }
     function nightdayHandler(self){
         var target=document.querySelector('body')
         if (self.value
       ==='night'){
-          target.style.backgroundColor='black';
-          target.style.color='white';
+          Body.setBackgroundColor('black');
+          Body.setColor('white');
           self.value='day'
-
-          var alist=document.querySelectorAll('a');
-          var i=0;
-          while(i<alist.length){
-            alist[i].style.color='powderblue';
-            i=i+1;
-          }
+          Links.setColor('powderblue');
         }
         else{
-          target.style.backgroundColor='white';
-          target.style.color='black';
+          Body.setBackgroundColor('white');
+          Body.setColor('black');
           self.value='night'
-          var alist=document.querySelectorAll('a');
-          var i=0;
-          while(i<alist.length){
-            alist[i].style.color='blue';
-            i=i+1;
-          }
+          Links.setColor('blue');
         }
     }
+
+
     </script>
-
-
 
     <input type="button" value="night" onclick="
       nightdayHandler(this);
-
-    ">
-    <input type="button" value="day" onclick="
-      nightdayHandler(this);
-
     ">
 <div id="grid">
     <ol><!리스트의 순서를 나타냄 ordered list-->
